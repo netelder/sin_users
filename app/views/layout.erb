@@ -14,11 +14,22 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/jquery.hoverattribute.js"></script>
 
   <title></title>
 </head>
 <body>
-  <div class="nav"><a href="/logout">Log Out</a></div>
+
   <%= yield %>
+
+  <%if current_user%>
+    <div id="nav">
+      <form action="/logout">
+        <input type="submit" value="Log Out">
+      </form>
+      <!-- <a href="/logout">Log Out</a> -->
+    </div>
+  <%end%>  
+</div>
 </body>
 </html>

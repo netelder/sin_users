@@ -2,12 +2,45 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 1px #eeeeee;
 }
+.container h1 {
+  color: #eeeeee;
+}
+
 th {
   text-align: left;
 }
 
-#failed {
+.error {
   color: red;
 }
+
+html { 
+  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=24ade300&noise=2d27cf&density=18&opacity=52"); 
+  background-repeat: repeat;
+  background-color: #25b3e6;
+}
+
+input {
+  border-radius: 7px;
+  background-color: #eee;
+}
+
+#nav {
+  margin-left: 190px;
+}
+
+a {
+  text-decoration: none;
+  color: #2d27cf;
+}
+
+a:hover {
+  color: black;
+}
+
+
+

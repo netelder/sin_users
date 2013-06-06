@@ -6,9 +6,9 @@
   <%="No urls for you"%> 
 <% else %> 
   <% @urls.each do |url| %> 
-    Original URL: <%= url.original %> <br>
-    Short URL: <a href="/<%= url.short %>"><%= url.short %></a> <br>
-    Click Count: <%= url.click_count %> 
+    <a class="hover" href="<%= url.original %>">Original URL</a> &nbsp &nbsp
+    Short URL: <a href="/<%= url.short %>"><%= url.short %></a> &nbsp &nbsp &nbsp 
+    Click Count: <%= url.click_count %> &nbsp &nbsp
     <a href="/delete/<%=url.id%>">Delete this Url</a><br><br>
   <%end%> 
 <%end%> 
@@ -19,7 +19,7 @@
 <div class="container">
   <h1>Get another Short URL</h1>
 
-<form name="input" action="/urls/<%=current_user.id%>" method="post">
+<form class="form" name="input" action="/urls/<%=current_user.id%>" method="post">
 <input type="text" name="original" placeholder="enter your url here">
   <input type="submit" value="Get Short Url">
 </form>
