@@ -10,11 +10,9 @@ end
 post '/urls/:user_id' do |user_id|
   @url = Url.find_or_create_by_original(original: params[:original], short: Url.gen_hash, click_count: 0, user_id: user_id)
   if @url.valid?
-    # @url_valid = true
     @urls = current_user.urls
     erb :profile
   else
-    # @url_valid = false
     @urls = current_user.urls
     erb :profile
 
