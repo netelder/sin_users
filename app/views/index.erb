@@ -1,10 +1,11 @@
 <div class="container">
-  <h1>Welcome to our Dummy Users App!</h1>
+  <h1>Welcome to the URL Shortener App!</h1>
   <h3>Sign In!</h3>
 
   <% if @failed %>
     <p id='failed'><%= "Authentication Failed" %></p>
   <% end %>
+
   <form name="input" action="/login" method="post">
     <input type="text" name="email" required placeholder="Email">
     <input type="password" name="password" required placeholder="Password">
@@ -18,3 +19,21 @@
     <input type="submit" value="Create Account">
   </form>
 </div>
+
+<div class="container">
+  <h1>Get a Short URL without an Account!</h1>
+
+<form name="input" action="/urls" method="post">
+<input type="text" name="original" placeholder="enter your url here">
+  <input type="submit" value="Get Short Url">
+</form>
+
+<%if @url && !@url.valid?%>
+  <%@url.errors.full_messages.each do |message|%>
+    <% message = "Invalid URL" if message == "Original is invalid" %>
+    <p class="error"><%=message%></p>
+  <%end%>
+<%end%>
+  
+</div>
+

@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_many :urls
+
   include BCrypt
 
   def password
@@ -22,16 +24,3 @@ class User < ActiveRecord::Base
   end
 end
 
-
-
-__END__
-
-  def login
-    
-    
-      session[:user_id] = @user.id
-      redirect "/login/#{@user.id}"
-    else
-      redirect '/'
-    end
-  end
