@@ -5,9 +5,26 @@
   border: 2px solid black;
   border-radius: 15px;
   box-shadow: 3px 3px 1px #eeeeee;
+  margin-top: 80px;
 }
 .container h1 {
   color: #eeeeee;
+}
+
+.navbar {
+  height: 50px;
+  position: fixed;
+  background-color: #eeeeee;
+  width: 100%;
+  top: 0px;
+}
+
+.footer {
+  height: 70px;
+  position: fixed;
+  background-color: #eeeeee;
+  width: 100%;
+  bottom: 0px;
 }
 
 th {

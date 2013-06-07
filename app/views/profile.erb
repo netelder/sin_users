@@ -7,7 +7,7 @@
 <% else %> 
   <% @urls.each do |url| %> 
     <a class="hover" href="<%= url.original %>">Original URL</a> &nbsp &nbsp
-    Short URL: <a href="/<%= url.short %>"><%= url.short %></a> &nbsp &nbsp &nbsp 
+    Short URL: <a href="/<%= url.short %>" target="_blank"><%= url.short %></a> &nbsp &nbsp &nbsp 
     Click Count: <%= url.click_count %> &nbsp &nbsp
     <a href="/delete/<%=url.id%>">Delete this Url</a><br><br>
   <%end%> 

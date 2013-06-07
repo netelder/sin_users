@@ -26,7 +26,7 @@ get '/:short_url' do |short_url|
 end
 
 get '/delete/:url_id' do |url_id|
-  Url.delete(url_id)
+  Url.destroy(url_id)
   @urls = current_user.urls
   erb :profile
 end
